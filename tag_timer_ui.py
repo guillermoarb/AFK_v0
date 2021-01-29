@@ -14,8 +14,9 @@ class Window(QWidget):
         self.setGeometry(100,100,300,50)
 
         #Font set
-        self.font = QFont("SOURCECODEPRO-REGULAR")
+        self.font = QFont("FIRACODE-REGULAR")
         self.font.setPointSize(14)
+        self.font.setStyleStrategy(QFont.PreferAntialias)
 
         # Create label
         self.time_cnt_lbl_log_on = QLabel("ON",self)
@@ -32,10 +33,6 @@ class Window(QWidget):
         #Set window icon
         app_icon = QIcon("app_icon.png")
         self.setWindowIcon(app_icon)
-
-
-        
-
 
         self.show()
 
@@ -88,7 +85,6 @@ def task_1s():
     app_window.time_cnt_lbl_log_off.setText(time_log_off)
     app_window.time_cnt_lbl_log_off.repaint()
 
-def 
 
 
 if __name__ == '__main__':
