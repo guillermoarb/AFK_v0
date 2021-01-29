@@ -49,12 +49,25 @@ def task_1s():
     global time_logged_off_min
     global time_logged_off_hr
 
-    if (user32.GetForegroundWindow() != 0):
-        time_logged_on_sec = time_logged_on_sec + 1
-        
-    else:
-        time_logged_off_sec = time_logged_off_sec + 1
 
+    #Windows Default Lock Screen
+
+    foreground_window = user32.GetForegroundWindow() 
+
+    window_text_len = user32.GetWindowTextLengthW(foreground_window)
+    
+    window_text = ctypes.create_unicode_buffer(window_text_len + 1)
+    
+    user32.GetWindowTextW(foreground_window, window_text, window_text_len + 1)
+
+    print("Foreground Window {} ".format(foreground_window))
+    print(window_text.value)
+
+
+    if (foreground_window == 0)  or (window_text.value == "Windows Default Lock Screen"):
+        time_logged_off_sec = time_logged_off_sec + 1
+    else:
+        time_logged_on_sec = time_logged_on_sec + 1
 
 
     if (time_logged_on_sec == 60):
@@ -82,8 +95,6 @@ def task_1s():
     app_window.time_cnt_lbl_log_off.setText(time_log_off)
     app_window.time_cnt_lbl_log_off.repaint()
 
-
-    print(user32.GetForegroundWindow() )
 
 
 if __name__ == '__main__':
