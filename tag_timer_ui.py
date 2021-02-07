@@ -1,8 +1,8 @@
 import sys
 import ctypes
-from PySide2.QtCore import QTimer
-from PySide2.QtWidgets import QWidget, QApplication, QLabel
-from PySide2.QtGui import QIcon, QFont
+from PySide6.QtCore import QTimer
+from PySide6.QtWidgets import QWidget, QApplication, QLabel
+from PySide6.QtGui import QIcon, QFont
 import datetime
 
 class Window(QWidget):
