@@ -1,10 +1,10 @@
 import sys
 import ctypes
 import datetime
-from PySide6.QtUiTools import QUiLoader
-from PySide6.QtWidgets import QWidget, QApplication, QLabel
-from PySide6.QtCore import QFile, QTimer
-from PySide6.QtGui import QIcon, QFont
+from PySide6.QtUiTools import *
+from PySide6.QtWidgets import *
+from PySide6.QtCore import *
+from PySide6.QtGui import *
 
 class Window(QWidget):
     def __init__(self):
@@ -14,7 +14,36 @@ class Window(QWidget):
         #Set window icon
         app_icon = QIcon("app_icon.png")
         self.ui.setWindowIcon(app_icon)
-        
+
+        #Frameless window
+        self.ui.setWindowFlags(Qt.FramelessWindowHint)
+
+        self.label = QLabel(self.ui)
+        pixmap = QPixmap('ui/assets/close_16.png')
+        self.label.setPixmap(pixmap)
+        self.label.setGeometry(500,0,16,16)
+
+def showText1():
+    print ("Label 1 clicked")
+    app.quit()
+
+
+def clickable(widget):
+    class Filter(QObject):
+        clicked = Signal()
+        def eventFilter(self, obj, event):
+            if obj == widget:
+                if event.type() == QEvent.MouseButtonRelease:
+                    if obj.rect().contains(event.pos()):
+                        self.clicked.emit()
+                        return True
+            
+            return False
+
+    filter = Filter(widget)
+    widget.installEventFilter(filter)
+    return filter.clicked
+
 
 def task_1s():
     
@@ -119,6 +148,7 @@ if __name__ == '__main__':
     today = datetime.datetime.now()
     app_window.ui.date_lb.setText(today.strftime("%d %b"))
 
+    clickable(app_window.label).connect(showText1)
 
     app_window.ui.show()
 
