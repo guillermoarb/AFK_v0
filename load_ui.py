@@ -9,23 +9,43 @@ from PySide6.QtGui import *
 class Window(QWidget):
     def __init__(self):
         super(Window, self).__init__()
-        self.ui = QUiLoader().load(QFile("ui/main_window.ui"))
+        self.ui = QUiLoader().load(QFile("ui/window simple.ui"))
 
         #Set window icon
         app_icon = QIcon("app_icon.png")
         self.ui.setWindowIcon(app_icon)
 
         #Frameless window
-        self.ui.setWindowFlags(Qt.FramelessWindowHint)
+        #self.ui.setWindowFlags(Qt.FramelessWindowHint)
 
-        self.label = QLabel(self.ui)
-        pixmap = QPixmap('ui/assets/close_16.png')
-        self.label.setPixmap(pixmap)
-        self.label.setGeometry(500,0,16,16)
+        # self.label = QLabel(self.ui)
+        # pixmap = QPixmap('ui/assets/close_16.png')
+        # self.label.setPixmap(pixmap)
+        # self.label.setGeometry(500,0,16,16)
 
-def showText1():
-    print ("Label 1 clicked")
-    app.quit()
+    def show_dialog(self):
+        dialog = Dialog(self)  # self hace referencia al padre
+        dialog.ui.show()
+
+
+class Dialog(QDialog):
+    def __init__(self, *args, **kwargs):
+        super(Dialog, self).__init__(*args, **kwargs)
+        self.ui = QUiLoader().load(QFile("ui/dialog form.ui"))
+        self.setWindowTitle("Config Form")
+
+        self.ui.ok_bt.clicked.connect(self.ok_clicked)
+        self.ui.cancel_bt.clicked.connect(self.cancel_clicked)
+
+    def ok_clicked(self):
+        app_window.ui.task_lb.setText( self.ui.task_le.text() )
+        app_window.ui.project_lb.setText( self.ui.project_le.text() )
+        self.ui.hide()
+        
+
+    def cancel_clicked(self):
+        self.ui.hide()
+
 
 
 def clickable(widget):
@@ -148,7 +168,7 @@ if __name__ == '__main__':
     today = datetime.datetime.now()
     app_window.ui.date_lb.setText(today.strftime("%d %b"))
 
-    clickable(app_window.label).connect(showText1)
+    clickable(app_window.ui.task_lb).connect(app_window.show_dialog)
 
     app_window.ui.show()
 
