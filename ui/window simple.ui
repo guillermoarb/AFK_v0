@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>561</width>
-    <height>71</height>
+    <width>382</width>
+    <height>63</height>
    </rect>
   </property>
   <property name="font">
@@ -28,41 +28,24 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
-      <width>540</width>
-      <height>66</height>
+      <y>0</y>
+      <width>371</width>
+      <height>62</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
      <property name="topMargin">
       <number>0</number>
      </property>
-     <property name="horizontalSpacing">
-      <number>6</number>
+     <property name="bottomMargin">
+      <number>0</number>
      </property>
-     <item row="4" column="1">
-      <widget class="QLabel" name="ticket_lb">
-       <property name="font">
-        <font>
-         <family>Fira Code Retina</family>
-         <pointsize>16</pointsize>
-         <stylestrategy>PreferAntialias</stylestrategy>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color:#5E81AC;</string>
-       </property>
-       <property name="text">
-        <string>175345</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-       </property>
-       <property name="margin">
-        <number>0</number>
-       </property>
-      </widget>
-     </item>
+     <property name="horizontalSpacing">
+      <number>10</number>
+     </property>
+     <property name="verticalSpacing">
+      <number>0</number>
+     </property>
      <item row="4" column="4">
       <spacer name="horizontalSpacer">
        <property name="orientation">
@@ -71,74 +54,24 @@
        <property name="sizeHint" stdset="0">
         <size>
          <width>40</width>
-         <height>5</height>
+         <height>1</height>
         </size>
        </property>
       </spacer>
      </item>
-     <item row="5" column="1">
-      <widget class="QLabel" name="project_lb">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="font">
-        <font>
-         <family>Fira Code Retina</family>
-         <pointsize>12</pointsize>
-         <weight>50</weight>
-         <bold>false</bold>
-         <stylestrategy>PreferAntialias</stylestrategy>
-        </font>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color:#5E81AC;</string>
-       </property>
-       <property name="text">
-        <string>F4X4 G3</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="2" colspan="2">
-      <widget class="QLabel" name="counter_lb">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="font">
-        <font>
-         <family>Fira Code Retina</family>
-         <pointsize>16</pointsize>
-         <weight>50</weight>
-         <bold>false</bold>
-         <stylestrategy>PreferAntialias</stylestrategy>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color:#8FBCBB;</string>
-       </property>
-       <property name="text">
-        <string>06:23:23</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="2" colspan="3">
+     <item row="5" column="0" colspan="5">
       <widget class="QLabel" name="task_lb">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>20</height>
+        </size>
        </property>
        <property name="font">
         <font>
@@ -152,6 +85,79 @@
        </property>
        <property name="text">
         <string>Implemet PORT Configuration - 02:23</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2" colspan="2">
+      <widget class="QLabel" name="counter_lb">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Fira Code Retina</family>
+         <pointsize>16</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+         <stylestrategy>PreferAntialias</stylestrategy>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:#ECEFF4;</string>
+       </property>
+       <property name="text">
+        <string>06:23:23</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0" colspan="2">
+      <widget class="QLabel" name="ticket_lb">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Fira Code Retina</family>
+         <pointsize>16</pointsize>
+         <stylestrategy>PreferAntialias</stylestrategy>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:#2E3440;
+background-color: #ECEFF4;
+border: 1px solid #ECEFF4;
+border-radius: 2px;
+padding: 1px;</string>
+       </property>
+       <property name="text">
+        <string>175345</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+       <property name="margin">
+        <number>0</number>
+       </property>
+       <property name="indent">
+        <number>0</number>
        </property>
       </widget>
      </item>

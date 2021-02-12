@@ -34,7 +34,7 @@ class Window(QWidget):
             self.ui.counter_lb.setStyleSheet("color:#BF616A;")
         else:
             timer_1s.start()
-            self.ui.counter_lb.setStyleSheet("color:#8FBCBB;")
+            self.ui.counter_lb.setStyleSheet("color:#ECEFF4;")
             
 
 
@@ -48,13 +48,13 @@ class Dialog(QDialog):
         self.ui.cancel_bt.clicked.connect(self.cancel_clicked)
 
         #Get the actual text
-        self.ui.project_le.setText(app_window.ui.project_lb.text())
-        self.ui.ticket_le.setText("")
+        #self.ui.project_le.setText(app_window.ui.project_lb.text())
+        self.ui.ticket_le.setText(app_window.ui.ticket_lb.text())
         self.ui.task_le.setText("")
 
     def ok_clicked(self):
         app_window.ui.task_lb.setText( self.ui.task_le.text() )
-        app_window.ui.project_lb.setText( self.ui.project_le.text() )
+        #app_window.ui.project_lb.setText( self.ui.project_le.text() )
         app_window.ui.ticket_lb.setText(self.ui.ticket_le.text())
         self.ui.hide()
         
@@ -188,7 +188,7 @@ if __name__ == '__main__':
 
     clickable(app_window.ui.task_lb).connect(app_window.show_dialog)
     clickable(app_window.ui.ticket_lb).connect(app_window.show_dialog)
-    clickable(app_window.ui.project_lb).connect(app_window.show_dialog)
+    #clickable(app_window.ui.project_lb).connect(app_window.show_dialog)
     clickable(app_window.ui.counter_lb).connect(app_window.toggle_timer)
 
     app_window.ui.show()

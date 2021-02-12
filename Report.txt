@@ -2,3 +2,8 @@ Time: 00:00:02 	Task: Implemet PORT Configuration - 02:23
 Time: 00:00:03 	Task: Implemet PORT Configuration - 02:23
 Time: 00:00:03 	Task: Implemet PORT Configuration - 02:23
 Time: 00:00:03 	Task: Implemet PORT Configuration - 02:23
+Time: 00:00:38 	Task: Implemet PORT Configuration - 02:23
+Time: 00:01:44 	Task: Implemet PORT Configuration - 02:23
+Time: 00:01:53 	Task: Implement Timer
+Time: 00:01:54 	Task: Implement Timer
+Time: 00:00:20 	Task: Implemet PORT Configuration - 02:23
