@@ -27,6 +27,16 @@ class Window(QWidget):
         dialog = Dialog(self)  # self hace referencia al padre
         dialog.ui.show()
 
+    def toggle_timer(self):
+        if timer_1s.isActive() == True:
+            file_log()
+            timer_1s.stop()
+            self.ui.counter_lb.setStyleSheet("color:#BF616A;")
+        else:
+            timer_1s.start()
+            self.ui.counter_lb.setStyleSheet("color:#8FBCBB;")
+            
+
 
 class Dialog(QDialog):
     def __init__(self, *args, **kwargs):
@@ -37,16 +47,24 @@ class Dialog(QDialog):
         self.ui.ok_bt.clicked.connect(self.ok_clicked)
         self.ui.cancel_bt.clicked.connect(self.cancel_clicked)
 
+        #Get the actual text
+        self.ui.project_le.setText(app_window.ui.project_lb.text())
+        self.ui.ticket_le.setText("")
+        self.ui.task_le.setText("")
+
     def ok_clicked(self):
         app_window.ui.task_lb.setText( self.ui.task_le.text() )
         app_window.ui.project_lb.setText( self.ui.project_le.text() )
+        app_window.ui.ticket_lb.setText(self.ui.ticket_le.text())
         self.ui.hide()
         
 
     def cancel_clicked(self):
         self.ui.hide()
 
-
+def file_log():
+    with open("Report.txt", "a") as file_object:
+        file_object.write("Time: {} \tTask: {}\n".format(app_window.ui.counter_lb.text(), app_window.ui.task_lb.text() ))
 
 def clickable(widget):
     class Filter(QObject):
@@ -166,9 +184,12 @@ if __name__ == '__main__':
 
     #Get and update the date
     today = datetime.datetime.now()
-    app_window.ui.date_lb.setText(today.strftime("%d %b"))
+    #app_window.ui.date_lb.setText(today.strftime("%d %b"))
 
     clickable(app_window.ui.task_lb).connect(app_window.show_dialog)
+    clickable(app_window.ui.ticket_lb).connect(app_window.show_dialog)
+    clickable(app_window.ui.project_lb).connect(app_window.show_dialog)
+    clickable(app_window.ui.counter_lb).connect(app_window.toggle_timer)
 
     app_window.ui.show()
 
