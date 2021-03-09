@@ -1,0 +1,65 @@
+02/17/21 00:00:37 Activity:175345 		Log:Init 00:00:37
+02/17/21 00:01:21 Activity:175345 		Log:Init 00:01:21
+02/17/21 00:01:21 Activity:IDLE 		Log:IDLE
+02/17/21 00:02:21 Activity:IDLE 		Log:IDLE 00:01:00
+02/17/21 00:03:20 Activity:IDLE 		Log:IDLE 00:01:59
+02/17/21 00:03:20 Activity:Meeting 		Log:SW General Meeting GDL
+02/17/21 00:10:42 Activity:Meeting 		Log:SW General Meeting GDL 00:07:22
+02/17/21 00:25:42 Activity:Meeting 		Log:SW General Meeting GDL 00:22:22
+02/17/21 00:40:41 Activity:Meeting 		Log:SW General Meeting GDL 00:37:21
+02/17/21 00:55:39 Activity:Meeting 		Log:SW General Meeting GDL 00:52:19
+02/17/21 01:10:38 Activity:Meeting 		Log:SW General Meeting GDL 01:07:18
+02/17/21 01:25:37 Activity:Meeting 		Log:SW General Meeting GDL 01:22:17
+02/17/21 01:37:44 Activity:Meeting 		Log:SW General Meeting GDL 01:34:24
+02/17/21 01:37:45 Activity:Meeting 		Log:SW General Meeting GDL 01:34:25
+02/17/21 01:40:36 Activity:Meeting 		Log:SW General Meeting GDL 01:37:16
+02/17/21 01:43:07 Activity:Meeting 		Log:SW General Meeting GDL 01:39:47
+02/17/21 01:43:07 Activity:UTS INT 		Log:Integration of UTS 176421
+02/17/21 01:55:34 Activity:UTS INT 		Log:Integration of UTS 176421 00:12:27
+02/17/21 02:10:33 Activity:UTS INT 		Log:Integration of UTS 176421 00:27:26
+02/17/21 02:25:33 Activity:UTS INT 		Log:Integration of UTS 176421 00:42:26
+02/17/21 02:40:33 Activity:UTS INT 		Log:Integration of UTS 176421 00:57:26
+02/17/21 02:47:11 Activity:UTS INT 		Log:Integration of UTS 176421 01:04:04
+02/17/21 02:47:11 Activity:174482 		Log:Design Rework
+02/17/21 02:47:44 Activity:174482 		Log:Design Rework 00:00:33
+02/17/21 02:47:44 Activity:176482 		Log:Design Rework
+02/17/21 02:55:33 Activity:176482 		Log:Design Rework 00:07:49
+02/17/21 03:10:33 Activity:176482 		Log:Design Rework 00:22:49
+02/17/21 03:25:33 Activity:176482 		Log:Design Rework 00:37:49
+02/17/21 03:40:33 Activity:176482 		Log:Design Rework 00:52:49
+02/17/21 03:55:33 Activity:176482 		Log:Design Rework 01:07:49
+02/17/21 04:00:17 Activity:176482 		Log:Design Rework 01:12:33
+02/17/21 04:00:17 Activity:176482 		Log:Testing related
+02/17/21 04:01:24 Activity:176482 		Log:Testing related 00:01:07
+02/17/21 04:01:24 Activity:176482 		Log:Testing related 00:01:07
+02/17/21 04:01:24 Activity:176482 		Log:Testing related 00:01:07
+02/17/21 04:01:24 Activity:176482 		Log:Testing related 00:01:07
+02/17/21 04:03:01 Activity:176482 		Log:Testing related 00:02:44
+02/17/21 04:03:01 Activity:176482 		Log:Testing related 00:02:44
+02/17/21 04:09:18 Activity:176482 		Log:Testing related 00:09:01
+02/17/21 04:24:17 Activity:176482 		Log:Testing related 00:24:00
+02/17/21 04:39:16 Activity:176482 		Log:Testing related 00:38:59
+02/17/21 04:54:15 Activity:176482 		Log:Testing related 00:53:58
+02/17/21 05:09:15 Activity:176482 		Log:Testing related 01:08:58
+02/17/21 05:24:15 Activity:176482 		Log:Testing related 01:23:58
+02/17/21 05:39:15 Activity:176482 		Log:Testing related 01:38:58
+02/17/21 05:42:35 Activity:176482 		Log:Testing related 01:42:18
+02/17/21 05:42:35 Activity:Meeting 		Log:A3 GEN 3 Meeting
+02/17/21 05:54:15 Activity:Meeting 		Log:A3 GEN 3 Meeting 00:11:40
+02/17/21 06:09:15 Activity:Meeting 		Log:A3 GEN 3 Meeting 00:26:40
+02/17/21 06:24:15 Activity:Meeting 		Log:A3 GEN 3 Meeting 00:41:40
+02/17/21 06:39:15 Activity:Meeting 		Log:A3 GEN 3 Meeting 00:56:40
+02/17/21 06:42:34 Activity:Meeting 		Log:A3 GEN 3 Meeting 00:59:59
+02/17/21 06:42:34 Activity:Release 		Log:Relese
+02/17/21 06:42:48 Activity:Release 		Log:Relese 00:00:14
+02/17/21 06:42:48 Activity:Release 		Log:REL_MY22_U55X_TOD_1SPD_TT_0156
+02/17/21 06:42:59 Activity:Release 		Log:REL_MY22_U55X_TOD_1SPD_TT_0156 00:00:11
+02/17/21 06:42:59 Activity:Release 		Log:REL_MY22_U55X_TOD_1SPD_TT_0156
+02/17/21 06:54:14 Activity:Release 		Log:REL_MY22_U55X_TOD_1SPD_TT_0156 00:11:15
+02/17/21 07:09:14 Activity:Release 		Log:REL_MY22_U55X_TOD_1SPD_TT_0156 00:26:15
+02/17/21 07:24:13 Activity:Release 		Log:REL_MY22_U55X_TOD_1SPD_TT_0156 00:41:14
+02/17/21 07:25:28 Activity:Release 		Log:REL_MY22_U55X_TOD_1SPD_TT_0156 00:42:29
+02/17/21 07:25:28 Activity:Release 		Log:REL_MY22_U55X_TOD_1SPD_TT_0156 00:42:29
+02/17/21 07:30:20 Activity:Release 		Log:REL_MY22_U55X_TOD_1SPD_TT_0156 00:47:21
+02/17/21 07:30:23 Activity:Release 		Log:REL_MY22_U55X_TOD_1SPD_TT_0156 00:47:24
+02/17/21 07:30:23 Activity:Release 		Log:

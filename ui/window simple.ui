@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>382</width>
+    <width>594</width>
     <height>63</height>
    </rect>
   </property>
@@ -29,7 +29,7 @@
      <rect>
       <x>10</x>
       <y>0</y>
-      <width>371</width>
+      <width>581</width>
       <height>62</height>
      </rect>
     </property>
@@ -141,11 +141,21 @@
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">color:#2E3440;
+        <string notr="true">QLabel
+{
+color:#2E3440;
 background-color: #ECEFF4;
 border: 1px solid #ECEFF4;
-border-radius: 2px;
-padding: 1px;</string>
+border-radius: 5px;
+padding: 1px;
+padding-left: 5px;
+padding-right: 5px;
+}
+QLabel:hover
+{
+   background-color:#D8DEE9;
+border: 1px solid #D8DEE9;
+}</string>
        </property>
        <property name="text">
         <string>175345</string>

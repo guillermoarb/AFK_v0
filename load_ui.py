@@ -207,8 +207,8 @@ if __name__ == '__main__':
     time_logged_off_min = 0
     time_logged_off_hr = 0
 
-    activity_log = "Init"
-    activity_name = "Init"
+    activity_log = "Idle"
+    activity_name = "IDLE"
 
     loop_time_sec = 1
 
