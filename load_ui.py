@@ -6,7 +6,7 @@ from PySide6.QtWidgets import *
 from PySide6.QtCore import *
 from PySide6.QtGui import *
 
-
+import json_report
 
 class Window(QWidget):
     def __init__(self):
@@ -61,10 +61,6 @@ class Dialog(QDialog):
         global activity_name
         global activity_time
 
-
-        #Update report information
-        update_report()
-
         activity_log = self.ui.task_le.text()
         app_window.ui.task_lb.setText( activity_log)
         #app_window.ui.project_lb.setText( self.ui.project_le.text() )
@@ -85,10 +81,24 @@ class Dialog(QDialog):
 
 def update_report():
 
+    report.report_add_activity(app_window.ui.ticket_lb.text(), "PROJECT")
+    
+    report.report_update_item(  activity_time.strftime("%H:%M:%S"), 
+                                activity_log, 
+                                today.strftime("%m/%d/%y"), 
+                                app_window.ui.ticket_lb.text() )
+
+    report.report_update_week()
+    report.report_update_worked_time()
+    report.report_print_json()
+
+    """
     report_file_name = today.strftime("%m%d%y") + "_AFK.txt"
 
     with open(report_file_name, "a") as file_object:
         file_object.write("{} {} Activity:{} \t\tLog:{}\n".format(today.strftime("%m/%d/%y"),app_window.ui.counter_lb.text(), app_window.ui.ticket_lb.text(), app_window.ui.task_lb.text() ))
+    """
+
 
 def clickable(widget):
     class Filter(QObject):
@@ -237,6 +247,8 @@ if __name__ == '__main__':
 
     app_window.ui.show()
 
+    #Create a report object
+    report = json_report.Report()
 
     # Run the main Qt loop
     app.exec_()
