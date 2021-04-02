@@ -1,0 +1,56 @@
+{
+    "activities": [
+        {
+            "items": [
+                {
+                    "date": "12/34/56",
+                    "log": "Log 03",
+                    "time": "01:01:00"
+                },
+                {
+                    "date": "99/99/99",
+                    "log": "Log 01",
+                    "time": "01:01:00"
+                },
+                {
+                    "date": "78/90/12",
+                    "log": "Log 02",
+                    "time": "01:01:20"
+                }
+            ],
+            "name": "Activity 01",
+            "project": "Project 01",
+            "total_time_hr": 3,
+            "total_time_min": 3
+        },
+        {
+            "items": [
+                {
+                    "date": "78/90/52",
+                    "log": "Log 02",
+                    "time": "01:56:60"
+                }
+            ],
+            "name": "Activity 03",
+            "project": "Project 01",
+            "total_time_hr": 1,
+            "total_time_min": 57
+        },
+        {
+            "items": [
+                {
+                    "date": "12/34/56",
+                    "log": "Log 01",
+                    "time": "01:01:50"
+                }
+            ],
+            "name": "Activity 02",
+            "project": "Project 03",
+            "total_time_hr": 1,
+            "total_time_min": 1
+        }
+    ],
+    "week": 13,
+    "worked_time_hr": 6,
+    "worked_time_min": 2
+}

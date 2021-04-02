@@ -1,0 +1,49 @@
+03/12/21 00:00:20 Activity:175345 		Log:Idle 00:00:20
+03/12/21 00:00:20 Activity:General 		Log:General
+03/12/21 00:14:53 Activity:General 		Log:General 00:14:33
+03/12/21 00:29:53 Activity:General 		Log:General 00:29:33
+03/12/21 00:44:51 Activity:General 		Log:General 00:44:31
+03/12/21 00:59:51 Activity:General 		Log:General 00:59:31
+03/12/21 01:14:51 Activity:General 		Log:General 01:14:31
+03/12/21 01:29:50 Activity:General 		Log:General 01:29:30
+03/12/21 01:44:50 Activity:General 		Log:General 01:44:30
+03/12/21 01:59:50 Activity:General 		Log:General 01:59:30
+03/12/21 02:14:49 Activity:General 		Log:General 02:14:29
+03/12/21 02:29:48 Activity:General 		Log:General 02:29:28
+03/12/21 02:44:47 Activity:General 		Log:General 02:44:27
+03/12/21 02:59:47 Activity:General 		Log:General 02:59:27
+03/12/21 03:14:47 Activity:General 		Log:General 03:14:27
+03/12/21 03:29:45 Activity:General 		Log:General 03:29:25
+03/12/21 03:44:45 Activity:General 		Log:General 03:44:25
+03/12/21 03:52:50 Activity:General 		Log:General 03:52:30
+03/12/21 03:52:50 Activity:Meeting 		Log:Reeview MSR
+03/12/21 03:59:44 Activity:Meeting 		Log:Reeview MSR 00:06:54
+03/12/21 04:14:44 Activity:Meeting 		Log:Reeview MSR 00:21:54
+03/12/21 04:29:43 Activity:Meeting 		Log:Reeview MSR 00:36:53
+03/12/21 04:44:43 Activity:Meeting 		Log:Reeview MSR 00:51:53
+03/12/21 04:59:43 Activity:Meeting 		Log:Reeview MSR 01:06:53
+03/12/21 05:14:43 Activity:Meeting 		Log:Reeview MSR 01:21:53
+03/12/21 05:29:42 Activity:Meeting 		Log:Reeview MSR 01:36:52
+03/12/21 05:43:19 Activity:Meeting 		Log:Reeview MSR 01:50:29
+03/12/21 05:43:19 Activity:Meeting 		Log:Reeview MSR 01:50:29
+03/12/21 05:43:19 Activity:Meeting 		Log:Reeview MSR 01:50:29
+03/12/21 05:46:42 Activity:Meeting 		Log:Reeview MSR 01:53:52
+03/12/21 05:46:42 Activity:Meeting 		Log:Reeview MSR 01:53:52
+03/12/21 05:47:54 Activity:Meeting 		Log:Reeview MSR 01:55:04
+03/12/21 06:02:54 Activity:Meeting 		Log:Reeview MSR 02:10:04
+03/12/21 06:17:54 Activity:Meeting 		Log:Reeview MSR 02:25:04
+03/12/21 06:32:53 Activity:Meeting 		Log:Reeview MSR 02:40:03
+03/12/21 06:47:52 Activity:Meeting 		Log:Reeview MSR 02:55:02
+03/12/21 07:02:52 Activity:Meeting 		Log:Reeview MSR 03:10:02
+03/12/21 07:17:50 Activity:Meeting 		Log:Reeview MSR 03:25:00
+03/12/21 07:32:47 Activity:Meeting 		Log:Reeview MSR 03:39:57
+03/12/21 07:47:46 Activity:Meeting 		Log:Reeview MSR 03:54:56
+03/12/21 08:02:46 Activity:Meeting 		Log:Reeview MSR 04:09:56
+03/12/21 08:03:22 Activity:Meeting 		Log:Reeview MSR 04:10:32
+03/12/21 08:03:22 Activity:Meeting 		Log:Reeview MSR 04:10:32
+03/12/21 08:03:22 Activity:Meeting 		Log:Reeview MSR 04:10:32
+03/12/21 08:10:41 Activity:Meeting 		Log:Reeview MSR 04:17:51
+03/12/21 08:25:39 Activity:Meeting 		Log:Reeview MSR 04:32:49
+03/12/21 08:40:38 Activity:Meeting 		Log:Reeview MSR 04:47:48
+03/12/21 08:55:38 Activity:Meeting 		Log:Reeview MSR 05:02:48
+03/12/21 09:06:32 Activity:Meeting 		Log:Reeview MSR 05:13:42

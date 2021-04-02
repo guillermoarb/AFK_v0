@@ -67,13 +67,13 @@
        <string notr="true">background-color: #ECEFF4;
 border-style: none;
 border-width: 2px;
-border-radius: 12px;
+border-radius: 5px;
 border-color: #ECEFF4;
 padding: 4px;
 padding-left: 10px;</string>
       </property>
       <property name="text">
-       <string>Implement PORT</string>
+       <string/>
       </property>
      </widget>
     </item>
@@ -120,7 +120,7 @@ padding-left: 10px;</string>
 {
 color: #ECEFF4;
 background-color: #88C0D0;
-border-radius: 12px;
+border-radius: 5px;
 }
 QPushButton:hover
 {
@@ -160,13 +160,13 @@ QPushButton:hover
        <string notr="true">background-color: #ECEFF4;
 border-style: none;
 border-width: 2px;
-border-radius: 12px;
+border-radius: 5px;
 border-color: #ECEFF4;
 padding: 4px;
 padding-left: 10px;</string>
       </property>
       <property name="text">
-       <string>173423</string>
+       <string/>
       </property>
      </widget>
     </item>
@@ -198,13 +198,13 @@ padding-left: 10px;</string>
        <string notr="true">background-color: #ECEFF4;
 border-style: none;
 border-width: 2px;
-border-radius: 12px;
+border-radius: 5px;
 border-color: #ECEFF4;
 padding: 4px;
 padding-left: 10px;</string>
       </property>
       <property name="text">
-       <string>blablaba</string>
+       <string/>
       </property>
      </widget>
     </item>
@@ -236,7 +236,7 @@ padding-left: 10px;</string>
 {
 color: #ECEFF4;
 background-color: #88C0D0;
-border-radius: 12px;
+border-radius: 5px;
 }
 QPushButton:hover
 {

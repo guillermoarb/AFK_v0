@@ -84,7 +84,7 @@
         <string notr="true">color: #ECEFF4;</string>
        </property>
        <property name="text">
-        <string>Implemet PORT Configuration - 02:23</string>
+        <string>None</string>
        </property>
       </widget>
      </item>
@@ -158,7 +158,7 @@ border: 1px solid #D8DEE9;
 }</string>
        </property>
        <property name="text">
-        <string>175345</string>
+        <string>None</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>

@@ -1,0 +1,36 @@
+03/19/21 00:02:37 Activity:175345 		Log:Idle 00:02:37
+03/19/21 00:02:37 Activity:UTS 		Log:UTS can_app.c
+03/19/21 00:14:59 Activity:UTS 		Log:UTS can_app.c 00:12:22
+03/19/21 00:29:59 Activity:UTS 		Log:UTS can_app.c 00:27:22
+03/19/21 00:44:59 Activity:UTS 		Log:UTS can_app.c 00:42:22
+03/19/21 00:59:59 Activity:UTS 		Log:UTS can_app.c 00:57:22
+03/19/21 01:14:58 Activity:UTS 		Log:UTS can_app.c 01:12:21
+03/19/21 01:29:58 Activity:UTS 		Log:UTS can_app.c 01:27:21
+03/19/21 01:44:58 Activity:UTS 		Log:UTS can_app.c 01:42:21
+03/19/21 01:51:47 Activity:UTS 		Log:UTS can_app.c 01:49:10
+03/19/21 01:56:52 Activity:UTS 		Log:UTS can_app.c 01:54:15
+03/19/21 02:11:52 Activity:UTS 		Log:UTS can_app.c 02:09:15
+03/19/21 02:26:52 Activity:UTS 		Log:UTS can_app.c 02:24:15
+03/19/21 02:41:52 Activity:UTS 		Log:UTS can_app.c 02:39:15
+03/19/21 02:56:51 Activity:UTS 		Log:UTS can_app.c 02:54:14
+03/19/21 03:11:49 Activity:UTS 		Log:UTS can_app.c 03:09:12
+03/19/21 03:26:49 Activity:UTS 		Log:UTS can_app.c 03:24:12
+03/19/21 03:41:49 Activity:UTS 		Log:UTS can_app.c 03:39:12
+03/19/21 03:54:38 Activity:UTS 		Log:UTS can_app.c 03:52:01
+03/19/21 03:54:38 Activity:UTS 		Log:UTS can_app.c 03:52:01
+03/19/21 03:59:27 Activity:UTS 		Log:UTS can_app.c 03:56:50
+03/19/21 04:14:27 Activity:UTS 		Log:UTS can_app.c 04:11:50
+03/19/21 04:29:27 Activity:UTS 		Log:UTS can_app.c 04:26:50
+03/19/21 04:44:27 Activity:UTS 		Log:UTS can_app.c 04:41:50
+03/19/21 04:59:27 Activity:UTS 		Log:UTS can_app.c 04:56:50
+03/19/21 05:14:26 Activity:UTS 		Log:UTS can_app.c 05:11:49
+03/19/21 05:29:25 Activity:UTS 		Log:UTS can_app.c 05:26:48
+03/19/21 05:44:25 Activity:UTS 		Log:UTS can_app.c 05:41:48
+03/19/21 05:59:25 Activity:UTS 		Log:UTS can_app.c 05:56:48
+03/19/21 06:14:25 Activity:UTS 		Log:UTS can_app.c 06:11:48
+03/19/21 06:29:25 Activity:UTS 		Log:UTS can_app.c 06:26:48
+03/19/21 06:44:23 Activity:UTS 		Log:UTS can_app.c 06:41:46
+03/19/21 06:59:21 Activity:UTS 		Log:UTS can_app.c 06:56:44
+03/19/21 07:14:21 Activity:UTS 		Log:UTS can_app.c 07:11:44
+03/19/21 07:29:21 Activity:UTS 		Log:UTS can_app.c 07:26:44
+03/19/21 07:41:39 Activity:UTS 		Log:UTS can_app.c 07:39:02

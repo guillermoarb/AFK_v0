@@ -1,0 +1,100 @@
+{
+    "week":40,
+    "worked_time": 42,
+    "activities":
+    [
+        {
+            "name":"IDLE",
+            "project":"Ford 4x4 GEN3",
+            "items":
+            [
+                {
+                    "time":"00:23:12",
+                    "log":"Idle",
+                    "date":"02/16/21"
+                }
+            ]
+        },
+
+        {
+            "name":"CR#123456",
+            "project":"Ford 4x4 GEN3",
+            "items":
+            [
+                {
+                    "time":"05:23:12",
+                    "log":"CDE - Implement SPI Driver",
+                    "date":"02/16/21"
+                },
+
+                {
+                    "time":"03:34:12",
+                    "log":"DGN - Implement SPI Driver",
+                    "date":"02/12/21"
+                }
+            ]
+        },
+
+        {       
+            "name":"UTS",
+            "project":"Ford 4x4 GEN3",
+            "items":
+            [
+                {
+                    "time":"06:45:12",
+                    "log":"Integration CR 173456",
+                    "date":"02/16/21"
+                },
+
+                {
+                    "time":"03:34:12",
+                    "log":"Integration of CR 123453",
+                    "date":"02/16/21"
+                }
+            ]
+        },
+
+        {       
+            "name":"MEETING",
+            "project":"Ford 4x4 GEN3",
+            "items":
+            [
+                {
+                    "time":"01:45:12",
+                    "log":"Integration CR 173456",
+                    "date":"02/16/21"
+                },
+
+                {
+                    "time":"03:34:12",
+                    "log":"Integration of CR 123453",
+                    "date":"02/16/21"
+                }
+            ]
+        },
+
+        {       
+            "name":"MEETING",
+            "project":"Management",
+            "items":
+            [
+                {
+                    "time":"01:45:12",
+                    "log":"Integration CR 173456",
+                    "date":"02/16/21"
+                },
+
+                {
+                    "time":"03:34:12",
+                    "log":"Integration of CR 123453",
+                    "date":"02/16/21"
+                }
+            ]
+        }
+    ]
+
+
+
+
+    
+}

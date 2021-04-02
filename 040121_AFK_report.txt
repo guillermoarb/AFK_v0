@@ -1,0 +1,48 @@
+{
+    "activities": [
+        {
+            "items": [
+                {
+                    "date": "12/34/56",
+                    "log": "Log 03",
+                    "time": "12:34:56"
+                },
+                {
+                    "date": "99/99/99",
+                    "log": "Log 01",
+                    "time": "44:44:44"
+                },
+                {
+                    "date": "78/90/12",
+                    "log": "Log 02",
+                    "time": "78:90:12"
+                }
+            ],
+            "name": "Activity 01",
+            "project": "Project 01"
+        },
+        {
+            "items": [],
+            "name": "Activity 03",
+            "project": "Project 01"
+        },
+        {
+            "items": [
+                {
+                    "date": "12/34/56",
+                    "log": "Log 01",
+                    "time": "12:34:56"
+                },
+                {
+                    "date": "78/90/512",
+                    "log": "Log 02",
+                    "time": "78:90:12"
+                }
+            ],
+            "name": "Activity 02",
+            "project": "Project 03"
+        }
+    ],
+    "week": 0,
+    "worked_time": 0
+}
