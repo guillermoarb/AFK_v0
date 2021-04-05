@@ -1,0 +1,20 @@
+{
+    "activities": [
+        {
+            "items": [
+                {
+                    "date": "04/05/21",
+                    "log": "Idle",
+                    "time": "00:00:02"
+                }
+            ],
+            "name": "None",
+            "project": "PROJECT",
+            "total_time_hr": 0,
+            "total_time_min": 0
+        }
+    ],
+    "week": 14,
+    "worked_time_hr": 0,
+    "worked_time_min": 0
+}

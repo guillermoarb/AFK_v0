@@ -1,25 +1,27 @@
 import json
 import datetime
 import math
+import os.path
 import pprint
 
 class Report:
     def __init__(self):
 
-        self.report_file_name = datetime.datetime.now().strftime("%m%d%y") + "_AFK_report.json"
+        self.report_file_path = datetime.datetime.now().strftime("%m%d%y") + "_AFK_report.json"
+        self.report_file_path = os.path.join("Reports", self.report_file_path)
 
         self.report_dic = {}
 
         #Load actual json report
-        with open(self.report_file_name, "r") as json_file:
-            self.report_dic = json.loads(json_file.read())
-        
-
-
-        #self.report_dic["week"] = 0
-        #self.report_dic["worked_time_hr"] = 0
-        #self.report_dic["worked_time_min"] = 0
-        #self.report_dic["activities"] = []
+        if os.path.isfile(self.report_file_path):
+            with open(self.report_file_path, "r") as json_file:
+                self.report_dic = json.loads(json_file.read())
+        #Or create a new dictionary for reporting
+        else:
+            self.report_dic["week"] = 0
+            self.report_dic["worked_time_hr"] = 0
+            self.report_dic["worked_time_min"] = 0
+            self.report_dic["activities"] = []
 
     def report_add_activity(self, name, project):
         activity = {}
@@ -107,7 +109,7 @@ class Report:
 
     def report_print_json(self):
 
-        with open(self.report_file_name, "w") as file_object:
+        with open(self.report_file_path, "w") as file_object:
             file_object.write(json.dumps(self.report_dic, indent=4, sort_keys=True))
 
     def report_update_week(self):
