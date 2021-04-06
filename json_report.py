@@ -7,10 +7,13 @@ import pprint
 class Report:
     def __init__(self):
 
-        self.report_file_path = datetime.datetime.now().strftime("%m%d%y") + "_AFK_report.json"
-        self.report_file_path = os.path.join("Reports", self.report_file_path)
-
         self.report_dic = {}
+
+        self.today = datetime.datetime.now()
+        self.report_update_week()
+        
+        self.report_file_path = "W" + str(self.week) + "_Report.json"
+        self.report_file_path = os.path.join("Reports", self.report_file_path)
 
         #Load actual json report
         if os.path.isfile(self.report_file_path):
@@ -18,10 +21,26 @@ class Report:
                 self.report_dic = json.loads(json_file.read())
         #Or create a new dictionary for reporting
         else:
-            self.report_dic["week"] = 0
+            self.report_dic["week_number"] = 0
             self.report_dic["worked_time_hr"] = 0
             self.report_dic["worked_time_min"] = 0
             self.report_dic["activities"] = []
+            self.report_dic["days"] = []
+
+    def report_update_day(self, time_counter):        
+        day = {}
+        day["date"] = self.today.strftime("%m%d%y")
+        day["name"] = self.today.strftime("%A")
+
+        seconds = self.report_counter_to_sec(time_counter)
+        day["worked_time_hr"], day["worked_time_min"] = self.report_sec_to_hr_min(seconds)
+
+        day_idx = self.day_get_idx(day["name"])
+        #If item don't exist add the item
+        if day_idx == None:
+            self.report_dic["days"].append(day)
+        else: #Update the item
+            self.report_dic["days"][day_idx] = day
 
     def report_add_activity(self, name, project):
         activity = {}
@@ -87,6 +106,23 @@ class Report:
 
         return activity_ind
 
+    def day_get_idx(self, day_name):
+
+        incidence = False
+        day_idx = 0
+
+        for day in self.report_dic["days"]:
+            if day["name"] == day_name:
+                incidence = True
+                break
+
+            day_idx = day_idx + 1
+
+        if incidence == False:
+            day_idx = None 
+
+        return day_idx
+
 
     def item_get_idx(self, activity_idx, item_log):
 
@@ -113,7 +149,8 @@ class Report:
             file_object.write(json.dumps(self.report_dic, indent=4, sort_keys=True))
 
     def report_update_week(self):
-        self.report_dic["week"] = datetime.datetime.now().isocalendar()[1]
+        self.week = self.today.isocalendar()[1]
+        self.report_dic["week_number"] = self.week
 
     def report_update_worked_time(self):
 
@@ -122,16 +159,14 @@ class Report:
 
         for activity in self.report_dic["activities"]:
             for item in activity["items"]:
-                time_parts = item["time"].split(":")
-                time_seconds = (int(time_parts[0]) * 3600) + (int(time_parts[1]) * 60) + int(time_parts[2])
+                time_seconds = self.report_counter_to_sec(item["time"])
                 #Total week time in seconds
                 total_week_time_seconds = total_week_time_seconds + time_seconds
                 #Total activity time in seconds
                 total_activity_time_seconds = total_activity_time_seconds + time_seconds
 
             #Report activity total time and then reset it
-            activity_time_hours = math.trunc(total_activity_time_seconds / 3600)
-            activity_time_minutes = math.trunc((total_activity_time_seconds % 3600) / 60)
+            activity_time_hours, activity_time_minutes = self.report_sec_to_hr_min(total_activity_time_seconds)
 
             activity["total_time_hr"] = activity_time_hours
             activity["total_time_min"] = activity_time_minutes
@@ -145,14 +180,22 @@ class Report:
         self.report_dic["worked_time_hr"] = week_time_hours
         self.report_dic["worked_time_min"] = week_time_minutes
 
-    def report_update_day_info(self):
-        pass
+    def report_counter_to_sec(self, counter):
+        time_parts = counter.split(":")
+        time_seconds = (int(time_parts[0]) * 3600) + (int(time_parts[1]) * 60) + int(time_parts[2])
 
+        return time_seconds
+    
+    def report_sec_to_hr_min(self, seconds):
+        hours = math.trunc(seconds / 3600)
+        minutes = math.trunc((seconds % 3600) / 60)
+
+        return hours, minutes
 """ 
 
 report_dict = {}
 
-report_dict["week"] = 0
+report_dict["week_number"] = 0
 report_dict["worked_time_hr"] = 0
 report_dict["worked_time_min"] = 0
 report_dict["activities"] = []

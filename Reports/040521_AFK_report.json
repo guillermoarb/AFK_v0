@@ -5,16 +5,29 @@
                 {
                     "date": "04/05/21",
                     "log": "Idle",
-                    "time": "00:00:02"
+                    "time": "04:59:06"
                 }
             ],
             "name": "None",
             "project": "PROJECT",
-            "total_time_hr": 0,
-            "total_time_min": 0
+            "total_time_hr": 4,
+            "total_time_min": 59
+        },
+        {
+            "items": [
+                {
+                    "date": "04/05/21",
+                    "log": "UTS CCB Verification",
+                    "time": "02:15:10"
+                }
+            ],
+            "name": "UTS",
+            "project": "PROJECT",
+            "total_time_hr": 2,
+            "total_time_min": 15
         }
     ],
-    "week": 14,
-    "worked_time_hr": 0,
-    "worked_time_min": 0
+    "week_number": 14,
+    "worked_time_hr": 7,
+    "worked_time_min": 14
 }

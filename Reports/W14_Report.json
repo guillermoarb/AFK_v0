@@ -1,0 +1,41 @@
+{
+    "activities": [
+        {
+            "items": [
+                {
+                    "date": "04/06/21",
+                    "log": "Idle",
+                    "time": "00:02:01"
+                }
+            ],
+            "name": "None",
+            "project": "PROJECT",
+            "total_time_hr": 0,
+            "total_time_min": 2
+        },
+        {
+            "items": [
+                {
+                    "date": "04/06/21",
+                    "log": "cmkwlvnwkl",
+                    "time": "00:00:58"
+                }
+            ],
+            "name": "Nonjckw jwkne",
+            "project": "PROJECT",
+            "total_time_hr": 0,
+            "total_time_min": 0
+        }
+    ],
+    "days": [
+        {
+            "date": "040621",
+            "name": "Tuesday",
+            "worked_time_hr": 0,
+            "worked_time_min": 2
+        }
+    ],
+    "week_number": 14,
+    "worked_time_hr": 0,
+    "worked_time_min": 2
+}

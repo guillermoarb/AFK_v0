@@ -90,6 +90,7 @@ def update_report():
 
     report.report_update_week()
     report.report_update_worked_time()
+    report.report_update_day(time_log_on.strftime("%H:%M:%S"))
     report.report_print_json()
 
     """
@@ -247,8 +248,9 @@ if __name__ == '__main__':
 
     app_window.ui.show()
 
-    #Create a report object
+    #Create a report object, empty or get the actual report
     report = json_report.Report()
+
 
     # Run the main Qt loop
     app.exec_()
