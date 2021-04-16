@@ -191,6 +191,32 @@ class Report:
         minutes = math.trunc((seconds % 3600) / 60)
 
         return hours, minutes
+
+    def report_get_today_time(self):
+        today_time = datetime.time()
+        today_hr = 0
+        today_min = 0
+        day_name = self.today.strftime("%A")
+        day_idx = self.day_get_idx(day_name)
+
+        #If item don't exist add the item
+        if day_idx != None:
+            today_hr = self.report_dic["days"][day_idx]["worked_time_hr"]
+            today_min = self.report_dic["days"][day_idx]["worked_time_min"]
+
+        else:
+            today_hr = 0
+            today_min = 0
+             
+        today_time = datetime.time(today_hr, today_min, 0)
+
+        return today_time
+
+
+
+
+
+
 """ 
 
 report_dict = {}

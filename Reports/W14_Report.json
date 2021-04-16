@@ -3,15 +3,15 @@
         {
             "items": [
                 {
-                    "date": "04/06/21",
+                    "date": "04/08/21",
                     "log": "Idle",
-                    "time": "00:02:01"
+                    "time": "00:53:20"
                 }
             ],
             "name": "None",
             "project": "PROJECT",
             "total_time_hr": 0,
-            "total_time_min": 2
+            "total_time_min": 53
         },
         {
             "items": [
@@ -25,17 +25,79 @@
             "project": "PROJECT",
             "total_time_hr": 0,
             "total_time_min": 0
+        },
+        {
+            "items": [
+                {
+                    "date": "04/06/21",
+                    "log": "Protocols review",
+                    "time": "07:17:24"
+                }
+            ],
+            "name": "176967",
+            "project": "PROJECT",
+            "total_time_hr": 7,
+            "total_time_min": 17
+        },
+        {
+            "items": [
+                {
+                    "date": "04/07/21",
+                    "log": "Port can_app",
+                    "time": "05:06:26"
+                }
+            ],
+            "name": "generic",
+            "project": "PROJECT",
+            "total_time_hr": 5,
+            "total_time_min": 6
+        },
+        {
+            "items": [
+                {
+                    "date": "04/09/21",
+                    "log": "Port can_app",
+                    "time": "06:44:42"
+                },
+                {
+                    "date": "04/09/21",
+                    "log": "None",
+                    "time": "00:48:01"
+                }
+            ],
+            "name": "Generic",
+            "project": "PROJECT",
+            "total_time_hr": 7,
+            "total_time_min": 32
         }
     ],
     "days": [
         {
             "date": "040621",
             "name": "Tuesday",
-            "worked_time_hr": 0,
-            "worked_time_min": 2
+            "worked_time_hr": 7,
+            "worked_time_min": 18
+        },
+        {
+            "date": "040721",
+            "name": "Wednesday",
+            "worked_time_hr": 6,
+            "worked_time_min": 46
+        },
+        {
+            "date": "040821",
+            "name": "Thursday",
+            "worked_time_hr": 7,
+            "worked_time_min": 13
+        },
+        {
+            "date": "040921",
+            "name": "Friday",
+            "worked_time_hr": 7,
+            "worked_time_min": 34
         }
     ],
     "week_number": 14,
-    "worked_time_hr": 0,
-    "worked_time_min": 2
+    "worked_time_hr": 20,
+    "worked_time_min": 50
 }

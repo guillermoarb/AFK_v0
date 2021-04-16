@@ -199,6 +199,10 @@ def clock_add_time_sec(clock_in, plus_seconds):
 
     return clock_out
 
+def init_log_on_timer():
+    global time_log_on
+
+    time_log_on = report.report_get_today_time()
 
 
 if __name__ == '__main__':
@@ -250,7 +254,8 @@ if __name__ == '__main__':
 
     #Create a report object, empty or get the actual report
     report = json_report.Report()
-
+    #Init log_on timer
+    init_log_on_timer()
 
     # Run the main Qt loop
     app.exec_()
