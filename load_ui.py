@@ -6,29 +6,41 @@ from PySide6.QtWidgets import *
 from PySide6.QtCore import *
 from PySide6.QtGui import *
 
+
 import json_report
 
 class Window(QWidget):
+
     def __init__(self):
         super(Window, self).__init__()
-        self.ui = QUiLoader().load(QFile("ui/window simple.ui"))
+        self.ui = QUiLoader().load(QFile("window simple.ui"))
 
         #Set window icon
         app_icon = QIcon("app_icon.png")
         self.ui.setWindowIcon(app_icon)
 
+        self.window_geometry = self.ui.geometry()
+ 
+        screen_geometry = QGuiApplication.primaryScreen().geometry()
+
+        self.window_cords = (screen_geometry.width() - self.window_geometry.width() , screen_geometry.height() - self.window_geometry.height())
+
+        #Set frame less
+        self.ui.setWindowFlags(Qt.FramelessWindowHint)
+
+        #Move to righ down corner
+        self.ui.move(self.window_cords[0] , self.window_cords[1] - 50 )
+
         #Frameless window
         #self.ui.setWindowFlags(Qt.FramelessWindowHint)
 
-        # self.label = QLabel(self.ui)
-        # pixmap = QPixmap('ui/assets/close_16.png')
-        # self.label.setPixmap(pixmap)
-        # self.label.setGeometry(500,0,16,16)
+
+
 
     def show_dialog(self):
-
-        dialog = Dialog(self)  # self hace referencia al padre
+        self.window_cords = self.ui.pos().toTuple()
         dialog.ui.show()
+        dialog.ui.move( self.window_cords[0] , self.window_cords[1] +  self.window_geometry.height() - dialog.ui.geometry().height() - 80 )
 
     def toggle_timer(self):
         if timer_1s.isActive() == True:
@@ -38,15 +50,58 @@ class Window(QWidget):
         else:
             timer_1s.start()
             self.ui.counter_lb.setStyleSheet("color:#ECEFF4;")
-            
+    
+    def show_menu(self):
+        #Get window position
+        self.window_cords = self.ui.pos().toTuple()
+        menu.ui.show()
+        menu.ui.move( self.window_cords[0] + self.window_geometry.width() - menu.ui.geometry().width()   , self.window_cords[1] +  self.window_geometry.height() - menu.ui.geometry().height() - 80 )
+
+
+class Menu(QDialog):
+
+    def __init__(self, *args, **kwargs):
+        super(Menu, self).__init__(*args, **kwargs)
+        self.ui = QUiLoader().load(QFile("menu.ui"))
+        self.setWindowTitle("Menu")
+
+        #Set window icon
+        app_icon = QIcon("app_icon.png")
+        self.ui.setWindowIcon(app_icon)
+
+        #Set frame less
+        self.ui.setWindowFlags(Qt.FramelessWindowHint)
+
+        
+        clickable(self.ui.menu_close).connect(self.menu_close)
+        clickable(self.ui.menu_save).connect(self.menu_save)
+        clickable(self.ui.menu_edit_activity).connect(self.menu_edit_activity)
+        clickable(self.ui.menu_open_week_report).connect(self.menu_open_week_report)
+
+    def menu_close(self):
+        QCoreApplication.quit()
+
+    def menu_save(self):
+        self.ui.hide()
+        
+
+    def menu_edit_activity(self):
+        self.ui.hide()
+
+    def menu_open_week_report(self):
+        self.ui.hide()
 
 
 class Dialog(QDialog):
 
     def __init__(self, *args, **kwargs):
         super(Dialog, self).__init__(*args, **kwargs)
-        self.ui = QUiLoader().load(QFile("ui/dialog form.ui"))
+        self.ui = QUiLoader().load(QFile("dialog form.ui"))
         self.setWindowTitle("Config Form")
+
+        #Set window icon
+        app_icon = QIcon("app_icon.png")
+        self.ui.setWindowIcon(app_icon)
 
         self.ui.ok_bt.clicked.connect(self.ok_clicked)
         self.ui.cancel_bt.clicked.connect(self.cancel_clicked)
@@ -55,6 +110,9 @@ class Dialog(QDialog):
         #self.ui.project_le.setText(app_window.ui.project_lb.text())
         self.ui.ticket_le.setText(app_window.ui.ticket_lb.text())
         self.ui.task_le.setText("")
+
+        #Set frame less
+        self.ui.setWindowFlags(Qt.FramelessWindowHint)
 
     def ok_clicked(self):
         global activity_log
@@ -240,6 +298,11 @@ if __name__ == '__main__':
 
     # Create and show the main window
     app_window = Window()
+    menu = Menu()
+    dialog = Dialog()
+
+    
+  
 
     #Get and update the date
     today = datetime.datetime.now()
@@ -249,6 +312,7 @@ if __name__ == '__main__':
     clickable(app_window.ui.ticket_lb).connect(app_window.show_dialog)
     #clickable(app_window.ui.project_lb).connect(app_window.show_dialog)
     clickable(app_window.ui.counter_lb).connect(app_window.toggle_timer)
+    clickable(app_window.ui.menu_lb).connect(app_window.show_menu)
 
     app_window.ui.show()
 

@@ -1,0 +1,176 @@
+{
+    "activities": [
+        {
+            "items": [
+                {
+                    "date": "04/23/21",
+                    "log": "Idle",
+                    "time": "00:00:09"
+                }
+            ],
+            "name": "None",
+            "project": "PROJECT",
+            "total_time_hr": 0,
+            "total_time_min": 0
+        },
+        {
+            "items": [
+                {
+                    "date": "04/20/21",
+                    "log": "UTS Integration",
+                    "time": "01:14:34"
+                }
+            ],
+            "name": "UTS",
+            "project": "PROJECT",
+            "total_time_hr": 1,
+            "total_time_min": 14
+        },
+        {
+            "items": [
+                {
+                    "date": "04/20/21",
+                    "log": "Port can_app",
+                    "time": "06:28:20"
+                }
+            ],
+            "name": "Generic",
+            "project": "PROJECT",
+            "total_time_hr": 6,
+            "total_time_min": 28
+        },
+        {
+            "items": [
+                {
+                    "date": "04/21/21",
+                    "log": "Port can_app",
+                    "time": "00:02:03"
+                },
+                {
+                    "date": "04/21/21",
+                    "log": "Port can_app design",
+                    "time": "06:50:36"
+                },
+                {
+                    "date": "04/23/21",
+                    "log": "Port can_app SRS",
+                    "time": "00:00:39"
+                }
+            ],
+            "name": "GI43",
+            "project": "PROJECT",
+            "total_time_hr": 6,
+            "total_time_min": 53
+        },
+        {
+            "items": [
+                {
+                    "date": "04/23/21",
+                    "log": "",
+                    "time": "00:00:08"
+                },
+                {
+                    "date": "04/23/21",
+                    "log": "dqwfqw",
+                    "time": "00:00:00"
+                }
+            ],
+            "name": "nckancksda",
+            "project": "PROJECT",
+            "total_time_hr": 0,
+            "total_time_min": 0
+        },
+        {
+            "items": [
+                {
+                    "date": "04/23/21",
+                    "log": "",
+                    "time": "00:00:00"
+                }
+            ],
+            "name": "Proyecto",
+            "project": "PROJECT",
+            "total_time_hr": 0,
+            "total_time_min": 0
+        },
+        {
+            "items": [
+                {
+                    "date": "04/23/21",
+                    "log": "",
+                    "time": "00:00:00"
+                },
+                {
+                    "date": "04/23/21",
+                    "log": "Task",
+                    "time": "00:00:00"
+                }
+            ],
+            "name": "Activity",
+            "project": "PROJECT",
+            "total_time_hr": 0,
+            "total_time_min": 0
+        },
+        {
+            "items": [
+                {
+                    "date": "04/23/21",
+                    "log": "Port can_app SRS",
+                    "time": "00:00:00"
+                }
+            ],
+            "name": "173234",
+            "project": "PROJECT",
+            "total_time_hr": 0,
+            "total_time_min": 0
+        },
+        {
+            "items": [
+                {
+                    "date": "04/23/21",
+                    "log": "Port can_app SRS",
+                    "time": "00:05:58"
+                }
+            ],
+            "name": "GI#43",
+            "project": "PROJECT",
+            "total_time_hr": 0,
+            "total_time_min": 5
+        }
+    ],
+    "days": [
+        {
+            "date": "041921",
+            "name": "Monday",
+            "worked_time_hr": 6,
+            "worked_time_min": 8
+        },
+        {
+            "date": "042021",
+            "name": "Tuesday",
+            "worked_time_hr": 8,
+            "worked_time_min": 30
+        },
+        {
+            "date": "042121",
+            "name": "Wednesday",
+            "worked_time_hr": 8,
+            "worked_time_min": 36
+        },
+        {
+            "date": "042221",
+            "name": "Thursday",
+            "worked_time_hr": 5,
+            "worked_time_min": 35
+        },
+        {
+            "date": "042321",
+            "name": "Friday",
+            "worked_time_hr": 4,
+            "worked_time_min": 24
+        }
+    ],
+    "week_number": 16,
+    "worked_time_hr": 14,
+    "worked_time_min": 42
+}

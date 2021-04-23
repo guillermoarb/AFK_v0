@@ -1,0 +1,114 @@
+{
+    "activities": [
+        {
+            "items": [
+                {
+                    "date": "04/16/21",
+                    "log": "Idle",
+                    "time": "00:00:03"
+                }
+            ],
+            "name": "None",
+            "project": "PROJECT",
+            "total_time_hr": 0,
+            "total_time_min": 0
+        },
+        {
+            "items": [
+                {
+                    "date": "04/12/21",
+                    "log": "Review",
+                    "time": "01:42:41"
+                }
+            ],
+            "name": "GEN4 Review",
+            "project": "PROJECT",
+            "total_time_hr": 1,
+            "total_time_min": 42
+        },
+        {
+            "items": [
+                {
+                    "date": "04/15/21",
+                    "log": "Port can_app",
+                    "time": "02:40:19"
+                },
+                {
+                    "date": "04/14/21",
+                    "log": "Port can_app.c",
+                    "time": "09:37:38"
+                },
+                {
+                    "date": "04/15/21",
+                    "log": "",
+                    "time": "00:00:00"
+                }
+            ],
+            "name": "Generic",
+            "project": "PROJECT",
+            "total_time_hr": 12,
+            "total_time_min": 17
+        },
+        {
+            "items": [
+                {
+                    "date": "04/15/21",
+                    "log": "por can_app",
+                    "time": "10:00:00"
+                }
+            ],
+            "name": "port can_app",
+            "project": "PROJECT",
+            "total_time_hr": 10,
+            "total_time_min": 0
+        },
+        {
+            "items": [
+                {
+                    "date": "04/16/21",
+                    "log": "Review meeting",
+                    "time": "02:53:27"
+                }
+            ],
+            "name": "Review",
+            "project": "PROJECT",
+            "total_time_hr": 2,
+            "total_time_min": 53
+        }
+    ],
+    "days": [
+        {
+            "date": "041221",
+            "name": "Monday",
+            "worked_time_hr": 8,
+            "worked_time_min": 56
+        },
+        {
+            "date": "041321",
+            "name": "Tuesday",
+            "worked_time_hr": 7,
+            "worked_time_min": 9
+        },
+        {
+            "date": "041421",
+            "name": "Wednesday",
+            "worked_time_hr": 5,
+            "worked_time_min": 44
+        },
+        {
+            "date": "041521",
+            "name": "Thursday",
+            "worked_time_hr": 2,
+            "worked_time_min": 41
+        },
+        {
+            "date": "041621",
+            "name": "Friday",
+            "worked_time_hr": 6,
+            "worked_time_min": 37
+        }
+    ],
+    "week_number": 15,
+    "worked_time_hr": 26,
+    "worked_time_min": 54
+}

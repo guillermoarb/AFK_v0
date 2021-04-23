@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>284</width>
-    <height>261</height>
+    <width>301</width>
+    <height>262</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
   <widget class="QWidget" name="gridLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>10</x>
      <y>0</y>
      <width>281</width>
      <height>257</height>
@@ -183,16 +183,16 @@ padding-left: 10px;</string>
        <string notr="true">QPushButton
 {
 color: #ECEFF4;
-background-color: #88C0D0;
+background-color: #4C566A;
 border-radius: 5px;
 }
 QPushButton:hover
 {
-   background-color:#81A1C1;
+   background-color:#434C5E;
 }</string>
       </property>
       <property name="text">
-       <string>OK</string>
+       <string>Accept</string>
       </property>
      </widget>
     </item>
@@ -222,7 +222,7 @@ QPushButton:hover
        <string notr="true">QPushButton
 {
 color: #ECEFF4;
-background-color: #88C0D0;
+background-color: #BF616A;
 border-radius: 5px;
 }
 QPushButton:hover
