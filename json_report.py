@@ -3,6 +3,7 @@ import datetime
 import math
 import os.path
 import pprint
+import os
 
 class Report:
     def __init__(self):
@@ -191,6 +192,35 @@ class Report:
         minutes = math.trunc((seconds % 3600) / 60)
 
         return hours, minutes
+
+    def report_get_task_time(self, activity, task):
+
+        activity_time = datetime.time()
+
+        print(activity)
+        print(task)
+        
+        activity_idx = self.activity_get_idx(activity)
+
+        if activity_idx != None:
+            item_idx = self.item_get_idx(activity_idx, task)
+
+            if item_idx != None:
+                act_time_split =  self.report_dic["activities"][activity_idx]["items"][item_idx]["time"].split(":")
+                activity_time = datetime.time(int(act_time_split[0]), int(act_time_split[1]), int(act_time_split[2]))
+        
+            else:
+                activity_time = datetime.time(0, 0, 0)
+        else:
+            activity_time = datetime.time(0, 0, 0)
+
+
+        return activity_time
+            
+
+    def report_open(self):
+        os.system(f"code {self.report_file_path}")
+
 
     def report_get_today_time(self):
         today_time = datetime.time()

@@ -98,18 +98,28 @@
                 {
                     "date": "04/23/21",
                     "log": "",
-                    "time": "00:00:00"
+                    "time": "00:00:10"
                 },
                 {
                     "date": "04/23/21",
                     "log": "Task",
-                    "time": "00:00:00"
+                    "time": "01:00:50"
+                },
+                {
+                    "date": "04/23/21",
+                    "log": "Idle",
+                    "time": "00:14:18"
+                },
+                {
+                    "date": "04/23/21",
+                    "log": "Task2",
+                    "time": "00:00:10"
                 }
             ],
             "name": "Activity",
             "project": "PROJECT",
-            "total_time_hr": 0,
-            "total_time_min": 0
+            "total_time_hr": 1,
+            "total_time_min": 15
         },
         {
             "items": [
@@ -129,13 +139,13 @@
                 {
                     "date": "04/23/21",
                     "log": "Port can_app SRS",
-                    "time": "00:05:58"
+                    "time": "01:04:11"
                 }
             ],
             "name": "GI#43",
             "project": "PROJECT",
-            "total_time_hr": 0,
-            "total_time_min": 5
+            "total_time_hr": 1,
+            "total_time_min": 4
         }
     ],
     "days": [
@@ -166,11 +176,11 @@
         {
             "date": "042321",
             "name": "Friday",
-            "worked_time_hr": 4,
-            "worked_time_min": 24
+            "worked_time_hr": 5,
+            "worked_time_min": 39
         }
     ],
     "week_number": 16,
-    "worked_time_hr": 14,
-    "worked_time_min": 42
+    "worked_time_hr": 16,
+    "worked_time_min": 56
 }

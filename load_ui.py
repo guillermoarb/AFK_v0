@@ -31,12 +31,6 @@ class Window(QWidget):
         #Move to righ down corner
         self.ui.move(self.window_cords[0] , self.window_cords[1] - 50 )
 
-        #Frameless window
-        #self.ui.setWindowFlags(Qt.FramelessWindowHint)
-
-
-
-
     def show_dialog(self):
         self.window_cords = self.ui.pos().toTuple()
         dialog.ui.show()
@@ -82,13 +76,16 @@ class Menu(QDialog):
         QCoreApplication.quit()
 
     def menu_save(self):
+        #Update report information
+        update_report()
         self.ui.hide()
         
-
     def menu_edit_activity(self):
+        app_window.show_dialog()
         self.ui.hide()
 
     def menu_open_week_report(self):
+        report.report_open()
         self.ui.hide()
 
 
@@ -126,7 +123,7 @@ class Dialog(QDialog):
         app_window.ui.ticket_lb.setText(activity_name)
 
         #Clear the activity timer, this is a new activity
-        activity_time = activity_time.replace(0,0,0)
+        activity_time = update_task(activity_name, activity_log )
 
         #Update report information
         update_report()
@@ -218,6 +215,11 @@ def update_log_timers():
         updated_clock = clock_add_time_sec(pause_time, loop_time_sec)
         pause_time = pause_time.replace(updated_clock.hour, updated_clock.minute, updated_clock.second)
 
+def update_task(activity_name, task):
+    
+    task_time = report.report_get_task_time(activity_name, activity_log)
+
+    return task_time
 
 
 def get_lock_status():
@@ -257,10 +259,14 @@ def clock_add_time_sec(clock_in, plus_seconds):
 
     return clock_out
 
-def init_log_on_timer():
+def init_timers_from_report(activity_name, activity_log):
     global time_log_on
+    global activity_time
 
+
+    #Init the time log on in case this is not the first time during the day
     time_log_on = report.report_get_today_time()
+    activity_time = report.report_get_task_time(activity_name, activity_log)
 
 
 if __name__ == '__main__':
@@ -280,8 +286,8 @@ if __name__ == '__main__':
     time_logged_off_min = 0
     time_logged_off_hr = 0
 
-    activity_log = "Idle"
-    activity_name = "IDLE"
+    activity_log = "Task"
+    activity_name = "Activity"
 
     loop_time_sec = 1
 
@@ -319,7 +325,7 @@ if __name__ == '__main__':
     #Create a report object, empty or get the actual report
     report = json_report.Report()
     #Init log_on timer
-    init_log_on_timer()
+    init_timers_from_report(activity_name, activity_log)
 
     # Run the main Qt loop
     app.exec_()
