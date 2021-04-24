@@ -11,6 +11,7 @@ import json_report
 
 class Window(QWidget):
 
+
     def __init__(self):
         super(Window, self).__init__()
         self.ui = QUiLoader().load(QFile("window simple.ui"))
@@ -31,6 +32,9 @@ class Window(QWidget):
         #Move to righ down corner
         self.ui.move(self.window_cords[0] , self.window_cords[1] - 50 )
 
+        #Variable to indicate if menu is open
+        self.menu_open = False
+
     def show_dialog(self):
         self.window_cords = self.ui.pos().toTuple()
         dialog.ui.show()
@@ -46,10 +50,16 @@ class Window(QWidget):
             self.ui.counter_lb.setStyleSheet("color:#ECEFF4;")
     
     def show_menu(self):
-        #Get window position
-        self.window_cords = self.ui.pos().toTuple()
-        menu.ui.show()
-        menu.ui.move( self.window_cords[0] + self.window_geometry.width() - menu.ui.geometry().width()   , self.window_cords[1] +  self.window_geometry.height() - menu.ui.geometry().height() - 80 )
+
+        if (self.menu_open == False):
+            self.menu_open = True
+            self.window_cords = self.ui.pos().toTuple()
+            menu.ui.show()
+            menu.ui.move( self.window_cords[0] + self.window_geometry.width() - menu.ui.geometry().width()   , self.window_cords[1] +  self.window_geometry.height() - menu.ui.geometry().height() - 80 )
+
+        else:
+            self.menu_open = False
+            menu.menu_self_close()
 
 
 class Menu(QDialog):
@@ -70,7 +80,8 @@ class Menu(QDialog):
         clickable(self.ui.menu_close).connect(self.menu_close)
         clickable(self.ui.menu_save).connect(self.menu_save)
         clickable(self.ui.menu_edit_activity).connect(self.menu_edit_activity)
-        clickable(self.ui.menu_open_week_report).connect(self.menu_open_week_report)
+        clickable(self.ui.menu_open_json_report).connect(self.menu_open_json_report)
+        clickable(self.ui.menu_generate_week_report).connect(self.menu_generate_week_report)
 
     def menu_close(self):
         QCoreApplication.quit()
@@ -84,8 +95,15 @@ class Menu(QDialog):
         app_window.show_dialog()
         self.ui.hide()
 
-    def menu_open_week_report(self):
-        report.report_open()
+    def menu_open_json_report(self):
+        report.json_report_open()
+        self.ui.hide()
+
+    def menu_generate_week_report(self):
+        report.report_generate_report()
+        self.ui.hide()
+
+    def menu_self_close(self):
         self.ui.hide()
 
 
@@ -115,10 +133,14 @@ class Dialog(QDialog):
         global activity_log
         global activity_name
         global activity_time
+        global project_name
+
+        #Update report information
+        update_report()
 
         activity_log = self.ui.task_le.text()
         app_window.ui.task_lb.setText( activity_log)
-        #app_window.ui.project_lb.setText( self.ui.project_le.text() )
+        project_name = self.ui.project_le.text()
         activity_name = self.ui.ticket_le.text()
         app_window.ui.ticket_lb.setText(activity_name)
 
@@ -135,8 +157,9 @@ class Dialog(QDialog):
         self.ui.hide()
 
 def update_report():
+    global project_name
 
-    report.report_add_activity(app_window.ui.ticket_lb.text(), "PROJECT")
+    report.report_add_activity(app_window.ui.ticket_lb.text(), project_name)
     
     report.report_update_item(  activity_time.strftime("%H:%M:%S"), 
                                 activity_log, 
@@ -286,8 +309,9 @@ if __name__ == '__main__':
     time_logged_off_min = 0
     time_logged_off_hr = 0
 
-    activity_log = "Task"
-    activity_name = "Activity"
+    activity_log = "Idle"
+    activity_name = "Idle"
+    project_name = "None"
 
     loop_time_sec = 1
 

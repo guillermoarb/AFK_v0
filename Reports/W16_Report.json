@@ -3,149 +3,87 @@
         {
             "items": [
                 {
-                    "date": "04/23/21",
-                    "log": "Idle",
-                    "time": "00:00:09"
+                    "date": "04/24/21",
+                    "log": "Test task",
+                    "time": "00:00:10"
                 }
             ],
-            "name": "None",
-            "project": "PROJECT",
+            "name": "Activity Test",
+            "project": "Test project",
             "total_time_hr": 0,
             "total_time_min": 0
         },
         {
             "items": [
                 {
-                    "date": "04/20/21",
-                    "log": "UTS Integration",
-                    "time": "01:14:34"
-                }
-            ],
-            "name": "UTS",
-            "project": "PROJECT",
-            "total_time_hr": 1,
-            "total_time_min": 14
-        },
-        {
-            "items": [
-                {
-                    "date": "04/20/21",
-                    "log": "Port can_app",
-                    "time": "06:28:20"
-                }
-            ],
-            "name": "Generic",
-            "project": "PROJECT",
-            "total_time_hr": 6,
-            "total_time_min": 28
-        },
-        {
-            "items": [
-                {
-                    "date": "04/21/21",
-                    "log": "Port can_app",
-                    "time": "00:02:03"
+                    "date": "04/24/21",
+                    "log": "dOING DESIGN",
+                    "time": "00:00:00"
                 },
                 {
-                    "date": "04/21/21",
-                    "log": "Port can_app design",
-                    "time": "06:50:36"
+                    "date": "04/24/21",
+                    "log": "dEVELOPING code",
+                    "time": "00:00:00"
                 },
                 {
-                    "date": "04/23/21",
-                    "log": "Port can_app SRS",
-                    "time": "00:00:39"
-                }
-            ],
-            "name": "GI43",
-            "project": "PROJECT",
-            "total_time_hr": 6,
-            "total_time_min": 53
-        },
-        {
-            "items": [
-                {
-                    "date": "04/23/21",
-                    "log": "",
+                    "date": "04/24/21",
+                    "log": "dEVELOPING SRS",
                     "time": "00:00:08"
-                },
-                {
-                    "date": "04/23/21",
-                    "log": "dqwfqw",
-                    "time": "00:00:00"
                 }
             ],
-            "name": "nckancksda",
-            "project": "PROJECT",
+            "name": "GI#43",
+            "project": "Ford 4x4 GEN3",
             "total_time_hr": 0,
             "total_time_min": 0
         },
         {
             "items": [
                 {
-                    "date": "04/23/21",
-                    "log": "",
-                    "time": "00:00:00"
-                }
-            ],
-            "name": "Proyecto",
-            "project": "PROJECT",
-            "total_time_hr": 0,
-            "total_time_min": 0
-        },
-        {
-            "items": [
-                {
-                    "date": "04/23/21",
-                    "log": "",
-                    "time": "00:00:10"
-                },
-                {
-                    "date": "04/23/21",
+                    "date": "04/24/21",
                     "log": "Task",
-                    "time": "01:00:50"
-                },
-                {
-                    "date": "04/23/21",
-                    "log": "Idle",
-                    "time": "00:14:18"
-                },
-                {
-                    "date": "04/23/21",
-                    "log": "Task2",
-                    "time": "00:00:10"
+                    "time": "00:01:45"
                 }
             ],
             "name": "Activity",
-            "project": "PROJECT",
-            "total_time_hr": 1,
-            "total_time_min": 15
+            "project": "Project",
+            "total_time_hr": 0,
+            "total_time_min": 1
         },
         {
             "items": [
                 {
-                    "date": "04/23/21",
-                    "log": "Port can_app SRS",
+                    "date": "04/24/21",
+                    "log": "dOING srs",
+                    "time": "00:00:54"
+                },
+                {
+                    "date": "04/24/21",
+                    "log": "dOING DESIGN",
+                    "time": "00:00:21"
+                },
+                {
+                    "date": "04/24/21",
+                    "log": "dOING CODE",
+                    "time": "00:00:00"
+                }
+            ],
+            "name": "GI#46",
+            "project": "Ford gen4",
+            "total_time_hr": 0,
+            "total_time_min": 1
+        },
+        {
+            "items": [
+                {
+                    "date": "04/24/21",
+                    "log": "SRS",
                     "time": "00:00:00"
                 }
             ],
             "name": "173234",
-            "project": "PROJECT",
+            "project": "T88",
             "total_time_hr": 0,
             "total_time_min": 0
-        },
-        {
-            "items": [
-                {
-                    "date": "04/23/21",
-                    "log": "Port can_app SRS",
-                    "time": "01:04:11"
-                }
-            ],
-            "name": "GI#43",
-            "project": "PROJECT",
-            "total_time_hr": 1,
-            "total_time_min": 4
         }
     ],
     "days": [
@@ -178,9 +116,15 @@
             "name": "Friday",
             "worked_time_hr": 5,
             "worked_time_min": 39
+        },
+        {
+            "date": "042421",
+            "name": "Saturday",
+            "worked_time_hr": 0,
+            "worked_time_min": 7
         }
     ],
     "week_number": 16,
-    "worked_time_hr": 16,
-    "worked_time_min": 56
+    "worked_time_hr": 0,
+    "worked_time_min": 3
 }

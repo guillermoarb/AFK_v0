@@ -4,21 +4,24 @@ import math
 import os.path
 import pprint
 import os
+from tabulate import tabulate
 
 class Report:
     def __init__(self):
-
+        #Main dictionary for report
         self.report_dic = {}
 
         self.today = datetime.datetime.now()
         self.report_update_week()
         
-        self.report_file_path = "W" + str(self.week) + "_Report.json"
-        self.report_file_path = os.path.join("Reports", self.report_file_path)
+        self.json_rep_file_path = "W" + str(self.week) + "_Report.json"
+        self.json_rep_file_path = os.path.join("Reports", self.json_rep_file_path)
+        self.md_rep_file_path = "W" + str(self.week) + "_Report.md"
+        self.md_rep_file_path = os.path.join("Reports", self.md_rep_file_path)
 
         #Load actual json report
-        if os.path.isfile(self.report_file_path):
-            with open(self.report_file_path, "r") as json_file:
+        if os.path.isfile(self.json_rep_file_path):
+            with open(self.json_rep_file_path, "r") as json_file:
                 self.report_dic = json.loads(json_file.read())
         #Or create a new dictionary for reporting
         else:
@@ -146,7 +149,7 @@ class Report:
 
     def report_print_json(self):
 
-        with open(self.report_file_path, "w") as file_object:
+        with open(self.json_rep_file_path, "w") as file_object:
             file_object.write(json.dumps(self.report_dic, indent=4, sort_keys=True))
 
     def report_update_week(self):
@@ -196,9 +199,6 @@ class Report:
     def report_get_task_time(self, activity, task):
 
         activity_time = datetime.time()
-
-        print(activity)
-        print(task)
         
         activity_idx = self.activity_get_idx(activity)
 
@@ -218,8 +218,8 @@ class Report:
         return activity_time
             
 
-    def report_open(self):
-        os.system(f"code {self.report_file_path}")
+    def json_report_open(self):
+        os.system(f"code {self.json_rep_file_path}")
 
 
     def report_get_today_time(self):
@@ -242,45 +242,51 @@ class Report:
 
         return today_time
 
+    def report_generate_report(self):
+        #Update the information before printing
+        self.report_update_worked_time()
+        #Get activity logs and time
+        rows = []
+        txt_dictionary = {}
+        #Add firs row as header
+        txt_dictionary["project"] = "Project"
+        txt_dictionary["name"] = "Activity"
+        txt_dictionary["time"] = "Time"
+        txt_dictionary["logs"] = "Logs"
+
+        rows.append(txt_dictionary)
+
+        for idx, activity in enumerate(self.report_dic["activities"]):
+            logs = ""
+            for item in activity["items"]:
+                logs = logs + item["log"] + ", " 
+
+            #Rounded time to report just hours
+            #if activity["total_time_min"] > 30:
+            #    activity["total_time_hr"] = activity["total_time_hr"]  + 1
+            #Make time a fraction
+            time = float(activity["total_time_hr"]) + float(activity["total_time_min"])  / 60
+            
+            #Save the activity info in a row for a file
+            txt_dictionary = {}
+            txt_dictionary["project"] = activity["project"]
+            txt_dictionary["name"] = activity["name"]
+            txt_dictionary["time"] = f"{time:.2f}"
+            txt_dictionary["logs"] = logs
+            
+            rows.append(txt_dictionary)
+
+        header = ["Activity name", "Time (hr)", "Logs"]
+        
+        with open(self.md_rep_file_path, "w") as md_file:
+            md_file.write(f"# WEEK {self.report_dic['week_number']} REPORT\n")
+            md_file.write( tabulate( rows, headers="firstrow", tablefmt = "github" , numalign="left")   )
+
+        os.system(f"code {self.md_rep_file_path}")
 
 
 
 
 
-""" 
-
-report_dict = {}
-
-report_dict["week_number"] = 0
-report_dict["worked_time_hr"] = 0
-report_dict["worked_time_min"] = 0
-report_dict["activities"] = []
-
-""" 
-"""
-report = Report()
 
 
-report.report_add_activity("Activity 01","Project 01")
-report.report_add_activity("Activity 03","Project 01")
-report.report_add_activity("Activity 03","Project 01")
-report.report_add_item('01:01:00', "Log 03", "12/34/56", "Activity 01")
-report.report_add_item('01:01:00', "Log 01", "99/99/99", "Activity 01")
-report.report_add_item("01:01:20", "Log 02", "78/90/12", "Activity 01")
-
-
-report.report_add_activity("Activity 02","Project 03")
-report.report_add_item("01:01:50", "Log 01", "12/34/56", "Activity 02")
-report.report_add_item("01:56:60", "Log 02", "78/90/52", "Activity 03")
-
-report.report_update_worked_time()
-report.report_update_week()
-
-#pprint.pprint(report_dict["activities"])
-report.report_print_json()
-
-
-
-#print( "item index {}".format(item_get_idx(activity_get_idx("Activity 01"), "Log 01")))
-
-"""
