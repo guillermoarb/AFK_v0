@@ -1,0 +1,85 @@
+{
+    "activities": [
+        {
+            "items": [
+                {
+                    "date": "04/27/21",
+                    "log": "Idle",
+                    "time": "01:14:42"
+                },
+                {
+                    "date": "04/26/21",
+                    "log": "",
+                    "time": "00:00:09"
+                }
+            ],
+            "name": "Activity",
+            "project": "None",
+            "total_time_hr": 1,
+            "total_time_min": 14
+        },
+        {
+            "items": [
+                {
+                    "date": "04/27/21",
+                    "log": "Recorder",
+                    "time": "01:45:18"
+                },
+                {
+                    "date": "04/26/21",
+                    "log": "",
+                    "time": "00:00:00"
+                },
+                {
+                    "date": "04/26/21",
+                    "log": "GEN3",
+                    "time": "00:00:00"
+                },
+                {
+                    "date": "04/27/21",
+                    "log": "General",
+                    "time": "01:13:53"
+                }
+            ],
+            "name": "Meeting",
+            "project": "F4X4 GEN4",
+            "total_time_hr": 2,
+            "total_time_min": 59
+        },
+        {
+            "items": [
+                {
+                    "date": "04/27/21",
+                    "log": "Code rework",
+                    "time": "02:52:02"
+                },
+                {
+                    "date": "04/27/21",
+                    "log": "Idle",
+                    "time": "01:14:30"
+                }
+            ],
+            "name": "GI#43",
+            "project": "F4X4 GEN4",
+            "total_time_hr": 4,
+            "total_time_min": 6
+        }
+    ],
+    "days": [
+        {
+            "date": "042621",
+            "name": "Monday",
+            "worked_time_hr": 5,
+            "worked_time_min": 52
+        },
+        {
+            "date": "042721",
+            "name": "Tuesday",
+            "worked_time_hr": 2,
+            "worked_time_min": 13
+        }
+    ],
+    "week_number": 17,
+    "worked_time_hr": 8,
+    "worked_time_min": 20
+}

@@ -109,6 +109,7 @@ class Menu(QDialog):
 
 class Dialog(QDialog):
 
+
     def __init__(self, *args, **kwargs):
         super(Dialog, self).__init__(*args, **kwargs)
         self.ui = QUiLoader().load(QFile("dialog form.ui"))
@@ -120,14 +121,24 @@ class Dialog(QDialog):
 
         self.ui.ok_bt.clicked.connect(self.ok_clicked)
         self.ui.cancel_bt.clicked.connect(self.cancel_clicked)
+        self.ui.activity_cb.editTextChanged.connect(self.load_tasks)
 
         #Get the actual text
         #self.ui.project_le.setText(app_window.ui.project_lb.text())
-        self.ui.ticket_le.setText(app_window.ui.ticket_lb.text())
-        self.ui.task_le.setText("")
+        #self.ui.ticket_le.setText(app_window.ui.ticket_lb.text())
+        #self.ui.task_le.setText("")
 
         #Set frame less
         self.ui.setWindowFlags(Qt.FramelessWindowHint)
+
+        #Load activities in activity combo box
+        self.ui.activity_cb.addItems(report.activity_get_all())
+    
+    def load_tasks(self):
+        print(report.task_get_all(self.ui.activity_cb.currentText()))
+        self.ui.task_cb.addItems(report.task_get_all(self.ui.activity_cb.currentText()))
+
+
 
     def ok_clicked(self):
         global activity_log
@@ -138,10 +149,10 @@ class Dialog(QDialog):
         #Update report information
         update_report()
 
-        activity_log = self.ui.task_le.text()
+        activity_log = self.ui.task_cb.currentText()
         app_window.ui.task_lb.setText( activity_log)
         project_name = self.ui.project_le.text()
-        activity_name = self.ui.ticket_le.text()
+        activity_name = self.ui.activity_cb.currentText()
         app_window.ui.ticket_lb.setText(activity_name)
 
         #Clear the activity timer, this is a new activity
@@ -310,7 +321,7 @@ if __name__ == '__main__':
     time_logged_off_hr = 0
 
     activity_log = "Idle"
-    activity_name = "Idle"
+    activity_name = "Activity"
     project_name = "None"
 
     loop_time_sec = 1
@@ -325,6 +336,9 @@ if __name__ == '__main__':
     timer_1s = QTimer()
     timer_1s.timeout.connect(task_1s)
     timer_1s.start(1000 * loop_time_sec)
+
+    #Create a report object, empty or get the actual report
+    report = json_report.Report()
 
     # Create and show the main window
     app_window = Window()
@@ -346,8 +360,7 @@ if __name__ == '__main__':
 
     app_window.ui.show()
 
-    #Create a report object, empty or get the actual report
-    report = json_report.Report()
+
     #Init log_on timer
     init_timers_from_report(activity_name, activity_log)
 

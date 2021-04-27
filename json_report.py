@@ -242,6 +242,23 @@ class Report:
 
         return today_time
 
+    def activity_get_all(self):
+        activities_array = []
+        for activity in self.report_dic["activities"]:
+            activities_array.append(activity["name"])
+
+        return activities_array
+
+    def task_get_all(self, activity):
+        tasks_array = []
+
+        activity_idx = self.activity_get_idx(activity)
+
+        for task in self.report_dic["activities"][activity_idx]["items"]:
+            tasks_array.append(task["log"])
+
+        return tasks_array
+
     def report_generate_report(self):
         #Update the information before printing
         self.report_update_worked_time()
