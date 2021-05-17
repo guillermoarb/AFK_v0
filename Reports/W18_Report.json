@@ -1,0 +1,135 @@
+{
+    "activities": [
+        {
+            "items": [
+                {
+                    "date": "05/09/21",
+                    "log": "Idle",
+                    "time": "12:56:53"
+                }
+            ],
+            "name": "Activity",
+            "project": "None",
+            "total_time_hr": 12,
+            "total_time_min": 56
+        },
+        {
+            "items": [
+                {
+                    "date": "05/04/21",
+                    "log": "Review",
+                    "time": "02:44:58"
+                }
+            ],
+            "name": "Meeting",
+            "project": "F4x4 Gen4",
+            "total_time_hr": 2,
+            "total_time_min": 44
+        },
+        {
+            "items": [
+                {
+                    "date": "05/04/21",
+                    "log": "Port L2_Can_App",
+                    "time": "03:49:53"
+                }
+            ],
+            "name": "GI_XXX",
+            "project": "F4x4 Gen4",
+            "total_time_hr": 3,
+            "total_time_min": 49
+        },
+        {
+            "items": [
+                {
+                    "date": "05/05/21",
+                    "log": "Integration testing",
+                    "time": "00:19:28"
+                },
+                {
+                    "date": "05/06/21",
+                    "log": "Port test specification",
+                    "time": "06:57:31"
+                }
+            ],
+            "name": "GI_43",
+            "project": "Ford 4x4 GEN4",
+            "total_time_hr": 7,
+            "total_time_min": 16
+        },
+        {
+            "items": [
+                {
+                    "date": "05/07/21",
+                    "log": "Projects investigation",
+                    "time": "02:31:14"
+                }
+            ],
+            "name": "Rmote Bench Dev",
+            "project": "Goals",
+            "total_time_hr": 2,
+            "total_time_min": 31
+        },
+        {
+            "items": [
+                {
+                    "date": "05/07/21",
+                    "log": "Verify memory",
+                    "time": "08:37:23"
+                }
+            ],
+            "name": "Release protocols",
+            "project": "Ford 4x4 Gen 2",
+            "total_time_hr": 8,
+            "total_time_min": 37
+        },
+        {
+            "items": [
+                {
+                    "date": "05/09/21",
+                    "log": "Comiendo frijoles",
+                    "time": "00:29:16"
+                }
+            ],
+            "name": "1243567",
+            "project": "Dos",
+            "total_time_hr": 0,
+            "total_time_min": 29
+        }
+    ],
+    "days": [
+        {
+            "date": "050421",
+            "name": "Tuesday",
+            "worked_time_hr": 8,
+            "worked_time_min": 33
+        },
+        {
+            "date": "050521",
+            "name": "Wednesday",
+            "worked_time_hr": 11,
+            "worked_time_min": 10
+        },
+        {
+            "date": "050621",
+            "name": "Thursday",
+            "worked_time_hr": 7,
+            "worked_time_min": 26
+        },
+        {
+            "date": "050721",
+            "name": "Friday",
+            "worked_time_hr": 11,
+            "worked_time_min": 15
+        },
+        {
+            "date": "050921",
+            "name": "Sunday",
+            "worked_time_hr": 0,
+            "worked_time_min": 29
+        }
+    ],
+    "week_number": 18,
+    "worked_time_hr": 38,
+    "worked_time_min": 26
+}

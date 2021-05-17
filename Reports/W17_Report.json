@@ -3,9 +3,9 @@
         {
             "items": [
                 {
-                    "date": "04/27/21",
+                    "date": "04/30/21",
                     "log": "Idle",
-                    "time": "01:14:42"
+                    "time": "05:10:57"
                 },
                 {
                     "date": "04/26/21",
@@ -15,8 +15,8 @@
             ],
             "name": "Activity",
             "project": "None",
-            "total_time_hr": 1,
-            "total_time_min": 14
+            "total_time_hr": 5,
+            "total_time_min": 11
         },
         {
             "items": [
@@ -51,18 +51,62 @@
                 {
                     "date": "04/27/21",
                     "log": "Code rework",
-                    "time": "02:52:02"
+                    "time": "06:19:54"
                 },
                 {
                     "date": "04/27/21",
                     "log": "Idle",
                     "time": "01:14:30"
+                },
+                {
+                    "date": "04/28/21",
+                    "log": "Design  rework",
+                    "time": "02:00:34"
                 }
             ],
             "name": "GI#43",
             "project": "F4X4 GEN4",
-            "total_time_hr": 4,
-            "total_time_min": 6
+            "total_time_hr": 9,
+            "total_time_min": 34
+        },
+        {
+            "items": [
+                {
+                    "date": "04/28/21",
+                    "log": "Investigation",
+                    "time": "03:33:37"
+                }
+            ],
+            "name": "Super_Variants",
+            "project": "F4X4G4",
+            "total_time_hr": 3,
+            "total_time_min": 33
+        },
+        {
+            "items": [
+                {
+                    "date": "04/30/21",
+                    "log": "Projects investigation",
+                    "time": "01:11:16"
+                }
+            ],
+            "name": "Bench Dev",
+            "project": "Goals",
+            "total_time_hr": 1,
+            "total_time_min": 11
+        },
+        {
+            "items": [
+                {
+                    "date": "04/30/21",
+                    "log": "Projects investigation",
+                    "time": "05:04:55"
+                }
+            ],
+            "name": "Bench_Dev",
+            "project": "Goals",
+            "total_time_hr": 5,
+            "total_time_min": 4
         }
     ],
     "days": [
@@ -75,11 +119,23 @@
         {
             "date": "042721",
             "name": "Tuesday",
-            "worked_time_hr": 2,
-            "worked_time_min": 13
+            "worked_time_hr": 5,
+            "worked_time_min": 41
+        },
+        {
+            "date": "042821",
+            "name": "Wednesday",
+            "worked_time_hr": 7,
+            "worked_time_min": 22
+        },
+        {
+            "date": "043021",
+            "name": "Friday",
+            "worked_time_hr": 8,
+            "worked_time_min": 23
         }
     ],
     "week_number": 17,
-    "worked_time_hr": 8,
-    "worked_time_min": 20
+    "worked_time_hr": 27,
+    "worked_time_min": 35
 }

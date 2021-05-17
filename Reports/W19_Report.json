@@ -1,0 +1,167 @@
+{
+    "activities": [
+        {
+            "items": [
+                {
+                    "date": "05/16/21",
+                    "log": "Idle",
+                    "time": "03:19:57"
+                }
+            ],
+            "name": "Activity",
+            "project": "None",
+            "total_time_hr": 3,
+            "total_time_min": 19
+        },
+        {
+            "items": [
+                {
+                    "date": "05/10/21",
+                    "log": "SBoot review",
+                    "time": "02:52:59"
+                },
+                {
+                    "date": "05/12/21",
+                    "log": "Review",
+                    "time": "08:25:41"
+                }
+            ],
+            "name": "Meeting",
+            "project": "Ford 4x4 GEN4",
+            "total_time_hr": 11,
+            "total_time_min": 18
+        },
+        {
+            "items": [
+                {
+                    "date": "05/14/21",
+                    "log": "Initial code dev",
+                    "time": "17:25:05"
+                }
+            ],
+            "name": "Super_Variants",
+            "project": "Ford 4x4 GEN4",
+            "total_time_hr": 17,
+            "total_time_min": 25
+        },
+        {
+            "items": [
+                {
+                    "date": "05/10/21",
+                    "log": "Decalraci\u00f3n aduanal",
+                    "time": "01:46:55"
+                }
+            ],
+            "name": "Generic",
+            "project": "Ford 4x4 GEN4",
+            "total_time_hr": 1,
+            "total_time_min": 46
+        },
+        {
+            "items": [
+                {
+                    "date": "05/11/21",
+                    "log": "Documentation",
+                    "time": "00:25:34"
+                }
+            ],
+            "name": "Release protocols",
+            "project": "Ford 4x4 GRN2",
+            "total_time_hr": 0,
+            "total_time_min": 25
+        },
+        {
+            "items": [
+                {
+                    "date": "05/11/21",
+                    "log": "BBVA Format",
+                    "time": "01:16:37"
+                }
+            ],
+            "name": "Bank update",
+            "project": "EC",
+            "total_time_hr": 1,
+            "total_time_min": 16
+        },
+        {
+            "items": [
+                {
+                    "date": "05/11/21",
+                    "log": "Documenting testing",
+                    "time": "02:37:51"
+                }
+            ],
+            "name": "GI#43",
+            "project": "Ford 4x4 Gen4",
+            "total_time_hr": 2,
+            "total_time_min": 37
+        },
+        {
+            "items": [
+                {
+                    "date": "05/11/21",
+                    "log": "Integration of 174838:11",
+                    "time": "01:32:17"
+                }
+            ],
+            "name": "UTS",
+            "project": "Ford 4x4 Gen3",
+            "total_time_hr": 1,
+            "total_time_min": 32
+        },
+        {
+            "items": [
+                {
+                    "date": "05/13/21",
+                    "log": "Instrumented code",
+                    "time": "02:35:51"
+                }
+            ],
+            "name": "2H Blink Issue",
+            "project": "Ford 4x4 GEN3",
+            "total_time_hr": 2,
+            "total_time_min": 35
+        }
+    ],
+    "days": [
+        {
+            "date": "051021",
+            "name": "Monday",
+            "worked_time_hr": 8,
+            "worked_time_min": 15
+        },
+        {
+            "date": "051121",
+            "name": "Tuesday",
+            "worked_time_hr": 7,
+            "worked_time_min": 22
+        },
+        {
+            "date": "051221",
+            "name": "Wednesday",
+            "worked_time_hr": 9,
+            "worked_time_min": 43
+        },
+        {
+            "date": "051321",
+            "name": "Thursday",
+            "worked_time_hr": 8,
+            "worked_time_min": 59
+        },
+        {
+            "date": "051421",
+            "name": "Friday",
+            "worked_time_hr": 7,
+            "worked_time_min": 42
+        },
+        {
+            "date": "051621",
+            "name": "Sunday",
+            "worked_time_hr": 0,
+            "worked_time_min": 14
+        }
+    ],
+    "week_number": 19,
+    "worked_time_hr": 42,
+    "worked_time_min": 18
+}
